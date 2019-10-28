@@ -2610,7 +2610,8 @@ footer {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #333232; }
+  color: #333232;
+  text-align: center; }
   .item-box:hover {
     border-color: #759ff6; }
 
@@ -2954,6 +2955,16 @@ footer {
 .art {
   display: none; }
 
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #759FF6; }
+
+.slick-dots li button:before {
+  color: #759FF6;
+  opacity: .3;
+  font-size: 8px;
+  line-height: 22px; }
+
 .btn--buy {
   background-color: transparent;
   border: 1px solid #759ff6;
@@ -2984,10 +2995,6 @@ footer {
 
 .circle {
   display: none; }
-
-.mobile-slider {
-  position: absolute;
-  left: -99999999px; }
 
 @media (min-width: 992px) {
   #nav-icon1 {
@@ -3063,13 +3070,27 @@ footer {
       fill: #fff; } }
 
 @media (max-width: 767px) {
+  .box {
+    display: block; }
+    .box ~ .text-center {
+      display: none; }
+  .item-box div:first-of-type {
+    font-size: 20px; }
+  .who {
+    padding-top: 50px; }
+  .select-box {
+    margin-bottom: 40px; }
+  .individual {
+    background: url("../img/Ellipse.png") no-repeat right center; }
+  .individual article {
+    text-align: center; }
+  .individual p {
+    color: #333232;
+    font-size: 14px; }
   .hidden-sm {
     display: none; }
-  .mobile-slider {
-    display: block;
-    position: static; }
-  .slider-advantages:not(#items) {
-    display: none; }
+  .slider-advantages__item {
+    margin-bottom: 34px; }
   h1,
   .title {
     font-size: 1.5rem; }
