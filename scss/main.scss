@@ -156,7 +156,7 @@ header nav,
 
   &--50 {
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 
     .footer-nav__item {
       width: 45%;
@@ -166,23 +166,39 @@ header nav,
 
 .footer-nav__item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 1.5rem;
 
   svg {
     margin-right: 20px;
+    flex: none;
+  }
+}
+
+.footer-nav__item {
+  a {
+    color: inherit;
+    font-weight: 700;
+    color: white;
+    display: block;
+    text-decoration: none;
+  }
+
+  div {
+    font-weight: 700;
+
+    a {
+      font-weight: 500;
+      margin-top: 12px;
+    }
   }
 }
 
 footer {
-  color: white;
   background-color: $primary-color;
   padding: 1rem 0;
+  color: #fff;
 
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
 }
 
 .copyright {
@@ -491,24 +507,22 @@ footer {
   height: 65px;
 }
 
-// catalog
-// .catalog,
-// .advantages {
-//   display: none;
-// }
-
 .custom-select {
   padding: 14px 20px;
   width: 260px;
   max-width: 100%;
   border: 1px solid $primary-color;
   font-weight: 500;
-  // font-family: "Lato Semibold";
+  text-align: left;
   text-transform: uppercase;
   cursor: pointer;
   font-size: 18px;
   position: relative;
-  background: #fff url("../img/arrow-select.png") 95% center no-repeat;
+  background: #fff url("../img/up.jpg") 95% center no-repeat;
+
+  &.open {
+    background-image: url("../img/arrow-select.png");
+  }
 }
 
 .custom-select ul {
@@ -732,6 +746,12 @@ footer {
 
     &~.text-center {
       display: none;
+    }
+  }
+
+  .footer-nav--100 {
+    .footer-nav__item {
+      width: 100%;
     }
   }
 
