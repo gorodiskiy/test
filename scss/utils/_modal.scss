@@ -147,8 +147,8 @@ label {
   margin-bottom: 0;
 }
 
-.form-row > .col,
-.form-row > [class*="col-"] {
+.form-row>.col,
+.form-row>[class*="col-"] {
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -201,13 +201,13 @@ label {
   margin: 10px 0 0 20px;
 }
 
-.form-check-input + label {
+.form-check-input+label {
   position: relative;
   padding: 0 0 0 20px;
   cursor: pointer;
 }
 
-.form-check-input + label:before {
+.form-check-input+label:before {
   content: "";
   position: absolute;
   top: 0;
@@ -219,7 +219,7 @@ label {
   transition: 0.2s;
 }
 
-.form-check-input + label:after {
+.form-check-input+label:after {
   content: "";
   position: absolute;
   top: 0;
@@ -234,17 +234,9 @@ label {
   display: none;
 }
 
-.form-check-input:checked + label:after {
+.form-check-input:checked+label:after {
   display: block;
 }
-
-form .btn {
-  background: #393939;
-}
-
-/* form .btn:hover {
-    background-color: #40b934;
-} */
 
 .modal-name,
 .modal-case {
@@ -330,7 +322,7 @@ form a {
   flex-direction: column;
 }
 
-.soket-grid__item > .btn {
+.soket-grid__item>.btn {
   max-width: 100%;
   width: 100%;
   padding: 4px 0;
@@ -343,12 +335,15 @@ form a {
     width: 100%;
     padding: 10px;
   }
+
   .modal .price {
     font-size: 16px;
   }
+
   .soket-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+
   label {
     font-size: 13px;
   }

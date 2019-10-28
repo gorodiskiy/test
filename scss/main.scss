@@ -506,7 +506,7 @@ footer {
   // font-family: "Lato Semibold";
   text-transform: uppercase;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 18px;
   position: relative;
   background: #fff url("../img/arrow-select.png") 95% center no-repeat;
 }
@@ -515,6 +515,7 @@ footer {
   position: absolute;
   display: none;
   width: 100%;
+  text-align: left;
   left: 0;
   top: 46px;
   border: 1px solid $primary-color;
@@ -522,6 +523,10 @@ footer {
   z-index: 10000;
   z-index: 99999;
   background: #fff;
+}
+
+.custom-select ul li {
+  padding: 14px 20px;
 }
 
 .custom-select ul li:hover {
@@ -730,6 +735,11 @@ footer {
     }
   }
 
+  .custom-select {
+    font-size: 14px;
+    text-align: left;
+  }
+
   .item-box div:first-of-type {
     font-size: 20px;
   }
@@ -780,11 +790,13 @@ footer {
     position: static;
   }
 
-  .custom-select {
+  .custom-select,
+  .custom-select ul li {
     padding: 9px 20px;
   }
 
   .custom-select ul {
     top: 36px;
   }
+
 }
