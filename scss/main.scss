@@ -222,6 +222,7 @@ footer {
   align-items: center;
   justify-content: center;
   color: $primary-text-color;
+  text-align: center;
 
   &:hover {
     border-color: $primary-color;
@@ -491,6 +492,11 @@ footer {
 }
 
 // catalog
+// .catalog,
+// .advantages {
+//   display: none;
+// }
+
 .custom-select {
   padding: 14px 20px;
   width: 260px;
@@ -581,6 +587,18 @@ footer {
   display: none;
 }
 
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #759FF6;
+}
+
+.slick-dots li button:before {
+  color: #759FF6;
+  opacity: .3;
+  font-size: 8px;
+  line-height: 22px;
+}
+
 .btn--buy {
   background-color: transparent;
   border: 1px solid $primary-color;
@@ -615,10 +633,10 @@ footer {
   display: none;
 }
 
-.mobile-slider {
-  position: absolute;
-  left: -99999999px;
-}
+// .mobile-slider {
+//   position: absolute;
+//   left: -99999999px;
+// }
 
 @media (min-width: 992px) {
   #nav-icon1 {
@@ -704,17 +722,45 @@ footer {
 }
 
 @media (max-width: 767px) {
+  .box {
+    display: block;
+
+    &~.text-center {
+      display: none;
+    }
+  }
+
+  .item-box div:first-of-type {
+    font-size: 20px;
+  }
+
+  .who {
+    padding-top: 50px;
+  }
+
+  .select-box {
+    margin-bottom: 40px;
+  }
+
+  .individual {
+    background: url('../img/Ellipse.png') no-repeat right center;
+  }
+
+  .individual article {
+    text-align: center;
+  }
+
+  .individual p {
+    color: $primary-text-color;
+    font-size: 14px;
+  }
+
   .hidden-sm {
     display: none;
   }
 
-  .mobile-slider {
-    display: block;
-    position: static;
-  }
-
-  .slider-advantages:not(#items) {
-    display: none;
+  .slider-advantages__item {
+    margin-bottom: 34px;
   }
 
   h1,

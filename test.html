@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
-    <script>
-      $(window).on("load resize", function() {
-        if ($(window).width() < 640) {
-          $("#items:not(.slick-initialized)").slick({
-            centerMode: true,
-            dots: true,
-            infinite: true,
-            speed: 100,
-            slidesToShow: 1
-          });
-        } else {
-          $("#items.slick-initialized").slick("unslick");
-        }
-      });
-    </script>
-    <div id="items" class="">
-      <div class="item">1</div>
-      <div class="item">2</div>
-      <div class="item">3</div>
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+  <script>
+    $(window).on("load resize", function () {
+      if ($(window).width() < 640) {
+        $(".slider-advantages:not(.slick-initialized)").slick({
+          centerMode: true,
+          dots: true,
+          infinite: true,
+          speed: 100,
+          slidesToShow: 1
+        });
+      } else {
+        $(".slider-advantages.slick-initialized").slick("unslick");
+      }
+    });
+  </script>
+  <div id="items" class="">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+</body>
+
 </html>
