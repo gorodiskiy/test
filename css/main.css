@@ -2363,6 +2363,20 @@ form a {
 .x-shc-total__controls-wrapper {
   padding: 20px 40px; }
 
+.cart_current__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+
 .x-shc-item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2373,18 +2387,20 @@ form a {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 40px; }
-  .x-shc-item .current {
+  .x-shc-item .cart_current {
     border: none;
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    width: 80px;
     margin-right: 0; }
-    .x-shc-item .current input {
+    .x-shc-item .cart_current input {
       border: 1px solid #759ff6;
       width: 60%;
       text-align: center;
-      margin-right: 5px; }
+      margin-right: 5px;
+      pointer-events: none; }
   .x-shc-item > div {
     -webkit-box-flex: 1;
     -webkit-flex: 1;

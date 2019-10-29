@@ -284,7 +284,7 @@ $(document).ready(function () {
         cartFromcookie();
         var cart_styles = '<style>#shop-cart-btn{color:#fff;cursor:pointer;display:none;fill:#fff;font-size:13px;height:70px;opacity:.9;position:fixed;right:25px;text-align:center;top:90px;width:70px;z-index:998}#shop-cart-btn.white{background-color:#759ff6;border:1px solid #e4eaec;color:#555;fill:#555}#shop-cart-btn.circle{border-radius:50%}#shop-cart-btn .cart-ico{height:40px;left:50%;fill:white;margin:-20px 0 0 -20px;position:absolute;top:50%;width:40px}#shop-cart-btn #shopCartAmount{    font-size: 14px; line-height: 10px; background-color:white;border-radius:50%;top:10px;font-weight:700;right:5px;height:20px;padding:5px;position:absolute;color:#759ff6;width:20px}  </style>';
         $("body").append(cart_styles); // добавлние css UI корзины и связных UI в DOM
-        cart_item_tpl = ('<div class="x-shc-item" data-qaid="product_item"><div class="x-shc-item__image-cell"><img class="x-shc-item__image" src=""></div><div class="x-shc-item__title-holder">sneakers </div><div class="x-shc-item__price-holder"><span class="x-shc-item__price articul"></span></div><div class="price-name"><div class="x-shc-item__title-holder">sneakers </div><div class="x-shc-item__price-holder"><span class="x-shc-item__price articul"></span></div></div><div><div class="current"><input type="number" value="1"><div class="current__btn"><span class="plus"></span><span class="minus"></span></div></div>шт.</div><div class="x-shc-item__summary-cell"><div class="x-shc-item__cell-label"></div><div><div class="x-shc-item__summary-price" data-qaid="product_price"></div></div></div><div class="x-shc-item__control-cell"><div><span class="x-shc-item__control delete_product_icon" data-qaid="delete_product_icon"><svg viewPort="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="11" x2="11" y2="1" stroke="black" stroke-width="2" /><line x1="1" y1="1" x2="11" y2="11" stroke="black" stroke-width="2" /></svg></span></div></div></div>'); // шаблон позиции в корзине 
+        cart_item_tpl = ('<div class="x-shc-item" data-qaid="product_item"><div class="x-shc-item__image-cell"><img class="x-shc-item__image" src=""></div><div class="x-shc-item__title-holder">sneakers </div><div class="x-shc-item__price-holder"><span class="x-shc-item__price articul"></span></div><div class="price-name"><div class="x-shc-item__title-holder">sneakers </div><div class="x-shc-item__price-holder"><span class="x-shc-item__price articul"></span></div></div><div><div class="cart_current"><input type="number" value="1"><div class="cart_current__btn"><span class="plus"></span><span class="minus"></span></div></div>шт.</div><div class="x-shc-item__summary-cell"><div class="x-shc-item__cell-label"></div><div><div class="x-shc-item__summary-price" data-qaid="product_price"></div></div></div><div class="x-shc-item__control-cell"><div><span class="x-shc-item__control delete_product_icon" data-qaid="delete_product_icon"><svg viewPort="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg"><line x1="1" y1="11" x2="11" y2="1" stroke="black" stroke-width="2" /><line x1="1" y1="1" x2="11" y2="11" stroke="black" stroke-width="2" /></svg></span></div></div></div>'); // шаблон позиции в корзине 
         order_send_form = '<div id="order_send_form"><div class="form-group"><label for="">Имя*:</label><input type="text" class="form-control user-name" placeholder="Имя" title="Напишите имя в указанном формате (Иван Петров)" required=""></div><div class="form-group"><label for="">Телефон*:</label><input type="tel" class="form-control user-phone" minlength="13" maxlength="13" placeholder="Телефон" title="Формат: +380975555555" required=""></div></div><div class="dop-info"><div class="delivery"><div class="form-row bd-example"><div class="col-12"><p>Варианты доставки:</p></div><div class="col-6"><div class="form-check form-check-inline"><input class="form-check-input user-post" type="radio" name="delivery-post" id="new-post-checkbox" value="Новая Почта" checked=""><label class="form-check-label" id="new-post-label" for="new-post-checkbox">Новая почта</label></div></div><div class="col-6"><div class="form-check form-check-inline"><input class="form-check-input user-post" type="radio" id="ukr-post-check" name="delivery-post" value="Укр Почта"><label class="form-check-label" id="ukr-post-label" for="ukr-post-check">УкрПочта</label></div></div></div><div class="bd-example" id="new-post"><div class="form-group form-row"><div class="col-12 mb-2"><input class="form-control user-surname" type="text" placeholder="Фамилия"></div></div><div class="form-group form-row"><div class="col-6 mb-2"><input class="form-control city" type="text" placeholder="Город"></div><div class="col-6 mb-2"><input class="form-control branch_number" type="text" placeholder="Номер отделения"></div></div><div class="form-group form-row"><div class="col-6 mb-2"> <select class="form-control" id="type-post"><option value="">Тип доставки:</option><option value="До отделения">До отделения</option><option value="Курьерская доставка">Курьерская доставка</option> </select></div><div class="col-6 mb-2"> <select class="form-control" id="payment"><option value="">Тип оплаты:</option><option value="Наложенный платёж">Наложенный платёж</option><option value="Оплата на карту">Оплата на карту</option> </select></div></div></div><div class="bd-example" id="ukr-post"><div class="form-group form-row"><div class="col-12 mb-2"><input class="form-control user-surname-ukr" type="text" placeholder="Фамилия"></div></div><div class="form-group form-row"><div class="col-6 mb-2"><input class="form-control region" type="text" placeholder="Область"></div><div class="col-6 mb-2"><input class="form-control user-area" type="text" placeholder="Район"></div></div><div class="form-group form-row"><div class="col-6 mb-2"><input class="form-control city-ukr" type="text" placeholder="Город"></div><div class="col-6 mb-2"><input class="form-control branch_number-ukr" type="text" placeholder="Номер отделения"></div></div><div class="form-group form-row"><div class="col-6 mb-2"><input class="form-control city-index" type="text" minlength="3" inputmode="numeric" placeholder="Индекс"></div><div class="col-6 mb-2"> <select class="form-control" id="payment-urk"><option value="">Тип оплаты:</option><option value="Наложенный платёж">Наложенный платёж</option><option value="Оплата на карту">Оплата на карту</option> </select></div></div></div></div></div><div class="bd-example additional"><div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="click" name="click" value="3"><label class="form-check-label additional-link action-elem" for="click" style="border:none;background:transparent;font-weight:bold;color:#793896;cursor:pointer;text-align:left">Добавить дополнительную информацию к заказу</label></div></div>';
     }
 
@@ -359,6 +359,7 @@ $(document).ready(function () {
     $("body").on("click", "#del", function () {
         $(".bay-art").text("");
     });
+
     $("body").on("click", ".additional-link", function () {
 
         const hBlock = document.querySelector(".dop-info");
@@ -399,7 +400,21 @@ $(document).ready(function () {
         var index = $(this).closest(".x-shc-item").index();
         cart_product_delete(index);
     });
+    $("body").on("click", ".cart_current__btn .plus", function () {
+        var cart_current = $(this).parent().parent().find("input").val();
+        var index = $(this).closest(".x-shc-item").index();
+        cart_products[index]['current'] = parseInt(cart_current, 10) + 1;
+        cart_update2();
+    });
 
+    $("body").on("click", ".cart_current__btn .minus", function () {
+        var cart_current = $(this).parent().parent().find("input").val();
+        var index = $(this).closest(".x-shc-item").index();
+        if (cart_current !== "1") {
+            cart_products[index]['current'] = parseInt(cart_current, 10) - 1;
+            cart_update2();
+        }
+    });
     $('body').on("change", ".cart_wrap .model_wrap #model", function () {
         var item = $(this).closest(".x-shc-item");
         var index = $(this).closest(".x-shc-item").index();
@@ -657,7 +672,7 @@ $(document).ready(function () {
                 li.find('.dop_img').attr('src', dop_img);
             }
             li.find('.x-shc-item__summary-price').html(psum);
-            li.find('.current input').val(current);
+            li.find('.cart_current input').val(current);
             order_total = order_total + parseFloat(psum) * current;
         }
         $('.cart_wrap .x-shc-total__info-wrapper .x-shc-total__price').html(order_total + ' грн.');
@@ -740,6 +755,7 @@ $(document).ready(function () {
             for (var product in cart_products) {
 
                 if (cart_products[product]['articul'] == p['articul']) {
+                    cart_products[product]['current'] = cart_products[product]['current'] + current;
                     update = 1;
                 }
             }
@@ -797,6 +813,48 @@ $(document).ready(function () {
         return false;
     });
 
+    // function show_cart2() { // отображение корзины без модального окна
+    //     console.log('show_cart2');
+    //     console.table(cart_products);
+    //     open_cart_modal();
+    //     // offer_modal_update();
+    //     $('.cart_wrap .cart_items').html('');
+    //     var order_total = 0;
+    //     for (var product in cart_products) {
+    //         console.log('product -' + product);
+
+    //         var name = cart_products[product]['name'];
+    //         var image = cart_products[product]['image'];
+    //         var model = cart_products[product]['model'];
+    //         var articul = cart_products[product]['articul'];
+    //         var current = cart_products[product]['current'];
+    //         //var dop = cart_products[product]['dop'];
+    //         //var dop_img = cart_products[product]['dop_img'];
+    //         var price = cart_products[product]['price'];
+    //         var psum = price + " грн";
+    //         $('.cart_wrap .cart_items').append(cart_item_tpl);
+    //         //console.log('append product tpl');
+    //         var li = $('.cart_wrap .cart_items .x-shc-item:last');
+    //         li.find('.x-shc-item__title-holder').html(name);
+    //         li.find('.x-shc-item__image').attr('src', image);
+    //         li.find('.current input').val(current);
+    //         li.find('.x-shc-item__price.model').html(model);
+    //         //if (cart_products[product]['cat'] == 'name'){
+    //         if (cart_products[product]['name'].indexOf('именной') > -1) {
+    //             var pname = '';
+    //             if (cart_products[product]['pname'] != '' && cart_products[product]['pname'] != undefined) {
+    //                 pname = cart_products[product]['pname'];
+    //             }
+    //             li.find('.model_wrap').append("<div class='name4print'><input value='" + pname + "' placeholder='Имя для печати'></div>");
+    //         }
+
+    //         li.find('.articul').html(articul);
+    //         li.find('.x-shc-item__summary-price').html(psum);
+    //         order_total = order_total + parseFloat(psum) * current;
+    //     }
+    //     $('.cart_wrap .x-shc-total__info-wrapper .x-shc-total__price').html(order_total + ' грн.');
+
+    // }
     function show_cart2() { // отображение корзины без модального окна
         console.log('show_cart2');
         console.table(cart_products);
@@ -821,7 +879,7 @@ $(document).ready(function () {
             var li = $('.cart_wrap .cart_items .x-shc-item:last');
             li.find('.x-shc-item__title-holder').html(name);
             li.find('.x-shc-item__image').attr('src', image);
-            li.find('.current input').val(current);
+            li.find('.cart_current input').val(current);
             li.find('.x-shc-item__price.model').html(model);
             //if (cart_products[product]['cat'] == 'name'){
             if (cart_products[product]['name'].indexOf('именной') > -1) {

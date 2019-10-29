@@ -324,14 +324,21 @@ form a {
   padding: 20px 40px;
 }
 
+.cart_current__btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .x-shc-item {
   display: flex;
   align-items: center;
   padding: 20px 40px;
 
-  .current {
+  .cart_current {
     border: none;
     display: inline-flex;
+    width: 80px;
     margin-right: 0;
 
     input {
@@ -339,6 +346,7 @@ form a {
       width: 60%;
       text-align: center;
       margin-right: 5px;
+      pointer-events: none;
     }
   }
 
