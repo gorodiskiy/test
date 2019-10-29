@@ -2775,6 +2775,33 @@ footer {
         -ms-flex-pack: distribute;
             justify-content: space-around; }
 
+            .cart_current {
+              border: 1px solid #759ff6;
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              padding: 5px;
+              width: 80px;
+              margin-right: 20px; }
+              .cart_current input {
+                width: 70%;
+                border: none;
+                pointer-events: none; }
+              .cart_current__btn {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -webkit-flex-direction: column;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                -webkit-justify-content: space-around;
+                    -ms-flex-pack: distribute;
+                        justify-content: space-around; }
+
 .plus,
 .minus {
   width: 14px;
