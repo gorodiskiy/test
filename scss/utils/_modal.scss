@@ -371,6 +371,11 @@ form a {
   }
 }
 
+.btn:disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+
 .x-shc-total__controls-wrapper {
   display: flex;
   align-items: flex-end;

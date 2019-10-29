@@ -314,6 +314,11 @@ $(document).ready(function () {
         $(".cart_wrap").toggleClass("fade in").show();
         $(".cart_wrap .modal-backdrop").show();
         var card_lenght = cart_products.length;
+        if (card_lenght >= 1) {
+            $(".qa-sc_list-buy_button").prop('disabled', false);
+        } else {
+            $(".qa-sc_list-buy_button").prop('disabled', true);
+        }
         if (card_lenght == 1) {
             $('.x-description').text(card_lenght + " товар");
         } else if (card_lenght >= 5 || card_lenght == 0) {
@@ -700,14 +705,9 @@ $(document).ready(function () {
             p['price'] = $("#feedback-form .bd-example .price").text();
             $('.empty_model').show();
         } else {
-
-            //	console.log('cpid '+cpid);
             $('.empty_model').hide();
             p['articul'] = $("#feedback-form .case-art").text();
             p['dop'] = $("#feedback-form .bay-art").text();
-            // if (p['dop'].length > 0) {
-            //     p['priced'] = ppriced;
-            // }
             p['dop_img'] = $("#feedback-form .bay-img").attr('src');
             p['quant'] = 1;
             p['name'] = $("#feedback-form .modal-name").text();
@@ -715,44 +715,6 @@ $(document).ready(function () {
 
 
 
-            // if (cpid > 0) {
-            //     for (var product in cart_products) {
-            //         if (product < 1) {
-            //             cart_products[product]['price'] = pprice1;
-            //         }
-            //         if (product == 1) {
-            //             cart_products[product]['price'] = pprice2;
-            //         }
-            //         if (product > 1) {
-            //             cart_products[product]['price'] = pprice3;
-            //         }
-            //         if (cart_products[product]['articul'] == p['articul']) {
-            //             update = 1;
-
-            //             if (p['dop'].length > 0) {
-            //                 cart_products[product]['priced'] = ppriced;
-            //             } else {
-            //                 cart_products[product]['priced'] = 0;
-            //             }
-            //             cart_products[product]['dop'] = p['dop'];
-            //             cart_products[product]['dop_img'] = p['dop_img'];
-            //         }
-            //     }
-            // }
-            // if (update == 0) {
-            //     if (cpid < 1) {
-            //         p['price'] = pprice1;
-            //     }
-            //     if (cpid == 1) {
-            //         p['price'] = pprice2;
-            //     }
-            //     if (cpid > 1) {
-            //         p['price'] = pprice3;
-            //     }
-            //     cart_products[cpid] = p;
-
-            //     //cart_products.push(p);
-            // }
 
 
             console.table(cart_products);
@@ -783,13 +745,7 @@ $(document).ready(function () {
             }
         }
         if (update == 0) {
-            // if (cpid <= 1) {
-            //     p['price'] = pprice1;
-            // }
-            // p['price'] = pprice1;
             cart_products[cpid] = p;
-
-            //cart_products.push(p);
         }
         var shopCartAmount = cart_products.length;
         $("#shopCartAmount").html(shopCartAmount);
