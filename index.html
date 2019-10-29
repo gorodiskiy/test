@@ -361,17 +361,29 @@
         <div class=modal-dialog role=document>
             <div class=modal-content>
                 <div class=qa-shoping-cart-list data-qaid=shopping_cart_list>
-                    <h4 class=x-title>Корзина заказов</h4>
+                    <h4 class=x-title>Корзина заказов <span>(в корзине<span class="x-description"></span>)</span></h4>
+                    <div class="basket--name">
+                        <div>Фото товара</div>
+                        <div>Название</div>
+                        <div>Артикул</div>
+                        <div>Количество</div>
+                        <div>Цена</div>
+                        <div>Удалить</div>
+                    </div>
                     <div class=cart_items></div>
                     <div class="qa-shopping-company-cart x-shc-group"data-qaid=shopping_company_cart>
                         <div class=x-shc-total>
                             <div class=x-shc-total__info-wrapper>
-                                <div class=x-shc-total__label>Всего:</div>
+                                <div class=x-shc-total__label>Итого</div>
                                 <div class=x-shc-total__price data-qaid=total_sum_order></div>
                             </div>
                             <div class=x-shc-total__controls-wrapper>
-                                <div class=x-shc-total__continue-control-holder><span class="x-button x-shc-total__button x-button_theme_purple x-button_type_contour x-shc-total__button_type_continue"><span class=x-button__text data-qaid=continue_shopping>Продолжить покупки</span></span></div>
-                                <div class=x-shc-total__main-control-holder><span class="x-shc-total__button btn qa-sc_list-buy_button"data-qaid=create_order_btn><span class=x-button__text >Сделать заказ</span><span class="x-button__text send">Отправить заказ</span></span></div>
+                                <!-- <div class=x-shc-total__continue-control-holder></div> -->
+                                <span class="x-button x-shc-total__button x-button_theme_purple x-button_type_contour x-shc-total__button_type_continue"><span class=x-button__text data-qaid=continue_shopping>Продолжить покупки</span></span>
+                                <div class="modal-block-btn">
+                                    <button class="btn delete-basket-all">Очистить корзину</button>
+                                    <div class=x-shc-total__main-control-holder><span class="x-shc-total__button btn qa-sc_list-buy_button"data-qaid=create_order_btn><span class=x-button__text >Сделать заказ</span></span></div>
+                                </div>
                             </div>
                         </div>
                     </div>

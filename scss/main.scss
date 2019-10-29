@@ -1,3 +1,7 @@
+$primary-color: #759ff6;
+$light-grey: #7c7e87;
+$primary-text-color: #333232;
+
 @import "./utils/_normalize";
 @import "./utils/_bootstrap";
 @import "./utils/_modal";
@@ -9,10 +13,6 @@
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf") format(truetype);
 }
-
-$primary-color: #759ff6;
-$light-grey: #7c7e87;
-$primary-text-color: #333232;
 
 html {
   font-size: 100%;
@@ -190,6 +190,7 @@ header nav,
     a {
       font-weight: 500;
       margin-top: 12px;
+      font-size: 15px;
     }
   }
 }
@@ -758,6 +759,7 @@ footer {
   .custom-select {
     font-size: 14px;
     text-align: left;
+    width: 100%;
   }
 
   .item-box div:first-of-type {
