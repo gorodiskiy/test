@@ -11,6 +11,33 @@ body.modal-open {
   opacity: 1;
 }
 
+.x-shc-item__summary-price {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.x-shc-total__price {
+  margin-right: 100px;
+}
+
+.x-shc-total__label {
+  margin-right: 15px;
+}
+
+.x-shc-total__info-wrapper {
+  display: flex;
+  align-items: baseline;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.x-shc-item__control svg {
+  color: #759FF6;
+  fill: #759FF6;
+  stroke: #759FF6;
+
+}
+
 // .modal {
 //     position: fixed;
 //     top: 0;
@@ -78,7 +105,8 @@ body.modal-open {
 
 @media (min-width: 544px) {
   .modal-dialog {
-    max-width: 600px;
+    width: 100%;
+    max-width: 1240px;
     margin: 30px auto;
   }
 }
@@ -330,6 +358,14 @@ form a {
   justify-content: space-around;
 }
 
+.basket--name {
+  font-size: 20px;
+}
+
+.cart_items {
+  font-size: 18px;
+}
+
 .x-shc-item {
   display: flex;
   align-items: center;
@@ -357,6 +393,11 @@ form a {
 
 .modal-content {
   overflow: hidden;
+}
+
+
+.descr {
+  display: none;
 }
 
 .x-button_theme_purple .x-button__text {
@@ -399,10 +440,32 @@ form a {
   display: none;
 }
 
+.x-shc-total__info-wrapper {
+  justify-content: flex-end;
+}
+
 @media (max-width: 767px) {
   .modal {
     width: 100%;
     padding: 10px;
+
+    .btn {
+      min-width: auto;
+      width: 100%;
+    }
+  }
+
+  .x-shc-item__control-cell {
+    width: 100%;
+  }
+
+  .x-shc-total__info-wrapper {
+    justify-content: space-between;
+  }
+
+  .x-shc-total__price,
+  .x-shc-total__label {
+    margin-right: 0;
   }
 
   .x-shc-item {
@@ -415,6 +478,53 @@ form a {
 
   .price-name {
     display: block;
+    flex: none !important;
+    width: 50%;
+  }
+
+  .x-shc-item>div {
+    flex: none;
+  }
+
+  .cart_items {
+    font-size: 16px;
+  }
+
+  .current-wrap {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .descr {
+    display: block;
+  }
+
+  .descr--inline {
+    display: inline-block;
+    padding: 0 5px;
+  }
+
+  .x-shc-item__summary-cell {
+    margin: 21px 0;
+  }
+
+  .x-title>span {
+    display: block;
+  }
+
+  .x-title {
+    padding: 20px;
+    font-size: 16px !important;
+  }
+
+  .x-title>span,
+  .x-shc-item__summary-price {
+    font-size: 14px;
+    display: inline-block;
+  }
+
+  .delete_product_icon svg {
+    margin-top: 0 !important;
   }
 
   .basket--name {
@@ -423,11 +533,17 @@ form a {
 
   .x-shc-item {
     flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 20px;
   }
 
   div.x-shc-item__image-cell {
     width: 50%;
     flex: none;
+  }
+
+  .x-shc-total__info-wrapper {
+    padding: 20px;
   }
 
   .modal .price {
