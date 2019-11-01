@@ -1,7 +1,6 @@
-let casesArr = [
-  {
+let casesArr = [{
     collection: "iPhoneX",
-    name: "Фиолетовый неон кеды",
+    name: "3D-242",
     img: "img/1.jpg",
     atr: "FG098-X-purple",
     imgposter: "img/1.jpg",
@@ -9,7 +8,7 @@ let casesArr = [
   },
   {
     collection: "iPhoneX",
-    name: "Фиолетовый неон именной",
+    name: "3D-242",
     img: "img/1.jpg",
     atr: "X-purple-name",
     imgposter: "img/1.jpg",
@@ -17,7 +16,7 @@ let casesArr = [
   },
   {
     collection: "iPhoneX",
-    name: "Зеленый неон",
+    name: "3D-242",
     img: "img/1.jpg",
     atr: "X-green-clear",
     imgposter: "img/1.jpg",
@@ -25,7 +24,7 @@ let casesArr = [
   },
   {
     collection: "iPhoneX",
-    name: "Зеленый неон глаза",
+    name: "3D-242",
     img: "img/1.jpg",
     atr: "FG098-X-green",
     imgposter: "img/1.jpg",
@@ -33,7 +32,7 @@ let casesArr = [
   },
   {
     collection: "iPhoneX",
-    name: "зеленый неон лабиринт",
+    name: "3D-242",
     img: "img/case/iPhoneX/X-green labirint.mp4",
     atr: "TXT427-X-green",
     imgposter: "img/1.jpg",
@@ -41,7 +40,7 @@ let casesArr = [
   },
   {
     collection: "iPhoneX",
-    name: "Оранжевый неон girl power",
+    name: "3D-242",
     img: "img/1.jpg",
     atr: "TXT427-X-orange",
     imgposter: "img/1.jpg",
@@ -49,7 +48,7 @@ let casesArr = [
   },
   {
     collection: "iPhoneX",
-    name: "Оранжевый неон лабиринт",
+    name: "3D-242",
     img: "img/1.jpg",
     atr: "TEX173-X-orange",
     imgposter: "img/1.jpg",
@@ -57,7 +56,7 @@ let casesArr = [
   },
   {
     collection: "iPhoneX",
-    name: "Оранжевый неон leo",
+    name: "3D-242",
     img: "img/1.jpg",
     atr: "TEX171-X-orange",
     imgposter: "img/1.jpg",
@@ -65,7 +64,7 @@ let casesArr = [
   },
   {
     collection: "iPhoneX",
-    name: "Оранжевый неон name",
+    name: "3D-242",
     img: "img/1.jpg",
     atr: "X-orange-name",
     imgposter: "img/1.jpg",
